@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Users</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th> Jméno </th>
+        <th> Příjmení </th>
+        <th> Věk </th>
+        <th> Váha </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${users.empty}">
+        <td colspan="2"> Seznam je prázdný </td>
+    </tr>
+    <tr th:each="user : ${users}">
+        <td><span th:text="${user.firstName}"> Title </span></td>
+        <td><span th:text="${user.lastName}"> Author </span></td>
+        <td><span th:text="${user.age}"> Author </span></td>
+        <td><span th:text="${user.weight}"> Author </span></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

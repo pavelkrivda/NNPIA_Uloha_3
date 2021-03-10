@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>User</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Shrnutí</h1>
+
+<p th:text="'Jméno: ' + ${user.firstName}"/>
+<p th:text="'Příjmení: ' + ${user.lastName}"/>
+<p th:text="'Věk: ' + ${user.age}"/>
+<p th:text="'Váha: ' + ${user.weight}"/>
+
+<a href="/user">Přidat dalšího uživatele</a>
+</body>
+</html>
